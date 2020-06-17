@@ -17,7 +17,6 @@ $(document).ready(function () {
 
     var memory = [] // 内存
     var insCount = 0 // 记录执行的指令个数
-    var algorithmTag = 0 //FIFO为0，LRU为1
     var missingPage_FIFO = 0 // FIFO缺页个数
     var missingPage_LRU = 0 // LRU缺页个数
     var Record = new Array(overall_pages) //LRU_记录最近一次调入内存的时间（以第几条ins计算）
@@ -38,14 +37,6 @@ $(document).ready(function () {
         PageTable = new Array(overall_pages) //页表
 
         insCount = 0 // 记录执行的指令个数
-        /*missingPage_FIFO = 0 // 缺页个数
-        missingPage_LRU = 0 // 缺页个数*/
-
-        /*运行信息显示*/
-        FIFO_missPageSpan.textContent = missingPage_FIFO
-        FIFO_missPageRateSpan.textContent = missingPage_FIFO / overall_instructions
-        LRU_missPageSpan.textContent = missingPage_LRU
-        LRU_missPageRateSpan.textContent = missingPage_LRU / overall_instructions
     }
 
 
@@ -312,11 +303,11 @@ $(document).ready(function () {
 
 
     function chooseAlgrithm() {
-        var ratio = document.querySelector("input:checked")
+        var selection = document.querySelector("input:checked")
         console.log("选择算法")
-        if (ratio.value === "FIFO") {
+        if (selection.value === "FIFO") {
             FIFO()
-        } else if (ratio.value === "LRU") {
+        } else if (selection.value === "LRU") {
             LRU()
         }
     }
