@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="author" content="邓欣凌 1850477">
+    
+    <title>My Memory Management——OS Assignment02</title>
+
+    <!--Icon-->
+    <link rel="icon" href="img/MyIcon.jpg">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  </head>
+
+  <body>
+    <!-- JavaScript -->
+    <script src="js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="js/Mymain.js"></script>
+
+    <div class="container"> 
+      <!-- 定义页眉 -->     
+        <header>
+          <h1>OS Course Assignment_02 Memory Management <br>请求调页存储管理模拟</h1>
+          <h3 class="subTitle">Tongji SSE</h3>
+          <h3 class="subTitle">1850477 邓欣凌</h3>
+        </header>
+
+     <!--<main id="main">--> 
+       <!--算法选择-->
+      <p>
+        <section class="box01">
+          <h3>请选择页面置换算法</h3><br>
+            <input 
+              type="radio" 
+              name="algorithm" 
+              id="FIFORadio" 
+              value="FIFO" 
+              checked="checked"
+            > 
+            <label for="FIFORadio" >FIFO_Page_Replacement</label><br><br><br>
+            <input 
+              type="radio" 
+              name="algorithm" 
+              id="LRURadio" 
+              value="LRU"
+            > 
+            <label for="LRURadio" >&nbsp;LRU_Page_Replacement </label><br><br>
+        </section>
+      </p>
+
+        <!--项目基础信息展示-->
+      <p>
+        <section class="box">
+          <h3>参数信息</h3><br>
+          <p>内存块数：<span id="overall_memory_blocks">4</span></p><br>
+          <p>总指令数：<span id="overall_instructions">320</span></p><br>
+          <p>每页存放指令数：<span id="instruction_per_page">10</span></p>
+        </section>
+
+        <!--结果统计分析-->
+        <section class="box">
+          <h3>结果统计分析</h3>
+          <p><strong>FIFO</strong></p>
+          <p>缺页次数：<span id="FIFO_miss_page_count">NULL</span></P>
+          <P>缺页率：<span id="FIFO_miss_page_rate">NULL</span></p>
+          <p><strong>LRU</strong></p>
+          <p>缺页次数：<span id="LRU_miss_page_count">NULL</span></P>
+          <P>缺页率：<span id="LRU_miss_page_rate">NULL</span></p>
+        </section>
+      </p>
+
+        <p><button id="start-Btn"><strong>START</strong> </button></p><br><br><br><br><br>
+
+        <!--结果展示区域-->
+        <div class="show">
+          <table
+              class="presenting_table"
+              id="memory_table"
+              height="100px"
+          >
+              <thead>
+                <tr>
+                  <th scope="col" >Sequence</th>
+                  <th scope="col" >Instruction</th>
+                  <th scope="col" >Frame01</th>
+                  <th scope="col" >Frame02</th>
+                  <th scope="col" >Frame03</th>
+                  <th scope="col" >Frame04</th>
+                  <th scope="col" >Page-Fault</th>
+                </tr>
+              </thead>
+          </table>
+        </div>
+
+        <div class="footer">
+          <pre>
+
+            
+            SSE Tongji University
+
+            Copyright @ 2020 Deng Xinling 邓欣凌 All Rights Reserved.
+
+
+          </pre>
+
+
+        </div>
+      
+
+    </div>
+
+  </body>
+</html>
