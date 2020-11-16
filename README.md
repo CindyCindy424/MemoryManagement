@@ -1,25 +1,10 @@
 # MemoryManagement
-Tongji SSE OS_Assignment_02
-
-> demo: https://cindycindy424.github.io/MemoryManagement/
-
-***
 ### 操作系统课程  内存管理项目
-
 #### 请求调页存储管理模拟
+Tongji SSE OS_Assignment_02
+1850477 邓欣凌 软件学院
 
-***
-
-1850477 邓欣凌
-
-软件学院
-
-***
-
-#### 项目查看
-
-1. https://cindycindy424.github.io/MemoryManagement/My_index.html
-2. 项目文件夹中点击 `My_index.html` 查看
+> demo: https://cindycindy424.github.io/MemoryManagement/My_index.html
 
 ***
 
